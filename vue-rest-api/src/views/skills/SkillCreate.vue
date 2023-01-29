@@ -17,6 +17,12 @@
                         v-model="form.name"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     />
+
+                    <div v-if="errors.name">
+                        <span class="text-sm text-red-400">{{
+                            errors.name[0]
+                        }}</span>
+                    </div>
                 </div>
 
                 <div class="mb-6">
@@ -31,6 +37,12 @@
                         v-model="form.slug"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     />
+
+                    <div v-if="errors.slug">
+                        <span class="text-sm text-red-400">{{
+                            errors.slug[0]
+                        }}</span>
+                    </div>
                 </div>
 
                 <div class="mt-4">

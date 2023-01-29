@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class StoreSkillRequest extends FormRequest
 {
@@ -25,7 +26,7 @@ class StoreSkillRequest extends FormRequest
     {
         return [
             'name' => ['required', 'min:3', 'max:20'],
-            'slug' => ['required', 'unique:skills,slug,']
+            'slug' => ['required', Rule::unique('skills')->ignore($this->skill)]
         ];
     }
 }
