@@ -11,7 +11,7 @@ class SkillController extends Controller
 {
     public function index()
     {
-        return response()->json("Skill Index");
+        return SkillResource::collection(Skill::all());
     }
 
     public function show(Skill $skill)
