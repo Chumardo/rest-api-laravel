@@ -11,7 +11,7 @@ export default {
             <div class="max-w-7xl mx-auto">
                 <nav>
                     <RouterLink to="/">Home</RouterLink>
-                    <RouterLink to="/about">About</RouterLink>
+                    <RouterLink to="/skills">Skills</RouterLink>
                 </nav>
             </div>
         </header>
