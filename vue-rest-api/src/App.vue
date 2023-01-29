@@ -1,16 +1,22 @@
-<script setup>
-import { RouterLink, RouterView } from "vue-router";
+<script>
+import { RouterView } from "vue-router";
+export default {
+    components: [RouterView],
+};
 </script>
 
 <template>
-    <header>
-        <div class="max-w-7xl mx-auto">
-            <nav>
-                <RouterLink to="/">Home</RouterLink>
-                <RouterLink to="/about">About</RouterLink>
-            </nav>
-        </div>
-    </header>
-
-    <RouterView />
+    <div>
+        <header>
+            <div class="max-w-7xl mx-auto">
+                <nav>
+                    <RouterLink to="/">Home</RouterLink>
+                    <RouterLink to="/about">About</RouterLink>
+                </nav>
+            </div>
+        </header>
+        <main class="max-w-7xl mx-auto min-h-screen">
+            <RouterView />
+        </main>
+    </div>
 </template>
