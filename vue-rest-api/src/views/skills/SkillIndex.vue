@@ -39,6 +39,7 @@
                             >
 
                             <button
+                                @click="destroySkill(skill.id)"
                                 class="px-4 py-2 bg-red-500 hover:bg-red-700 text-white rounded"
                             >
                                 Delete
@@ -55,7 +56,7 @@
 import useSkills from "../../composables/skills";
 import { onMounted } from "vue";
 
-const { skills, getSkills } = useSkills();
+const { skills, getSkills, destroySkill } = useSkills();
 
 onMounted(() => getSkills());
 </script>
